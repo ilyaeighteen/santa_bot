@@ -18,7 +18,10 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 TRIP_THEME = 'Поездка в Дагестан'
-DB_NAME = 'secret_santa.db'
+DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+os.makedirs(DATA_DIR, exist_ok=True)
+DB_NAME = os.path.join(DATA_DIR, 'secret_santa.db')
+LOG_NAME = os.path.join(DATA_DIR, 'secret_santa.log')
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 ADMIN_CHAT_ID = int(os.getenv('ADMIN_CHAT_ID'))
@@ -479,7 +482,7 @@ if __name__ == '__main__':
     # настраиваем логгер
     logging.basicConfig(
         level=logging.INFO,
-        filename='secret_santa.log',
+        filename=LOG_NAME,
         format='%(asctime)s, %(levelname)s, %(message)s, %(funcName)s',
         encoding='utf-8'
     )
