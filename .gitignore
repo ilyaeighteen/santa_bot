@@ -62,6 +62,7 @@ db.sqlite3
 db.sqlite3-journal
 
 # Проект: локальная БД и бэкапы
+data/
 secret_santa.db
 secret_santa.db.bak
 secret_santa.log

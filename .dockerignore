@@ -8,4 +8,5 @@ __pycache__
 .env
 secret_santa.db
 secret_santa.log
+data/
 README.md

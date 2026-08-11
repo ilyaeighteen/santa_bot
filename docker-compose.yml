@@ -6,9 +6,7 @@ services:
     env_file:
       - .env
     volumes:
-      - santa_db:/app/secret_santa.db
-      - santa_logs:/app/secret_santa.log
+      - santa_data:/app/data
 
 volumes:
-  santa_db:
-  santa_logs:
+  santa_data:
