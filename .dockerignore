@@ -1,0 +1,11 @@
+.git
+.gitignore
+venv
+env
+.venv
+__pycache__
+*.pyc
+.env
+secret_santa.db
+secret_santa.log
+README.md

@@ -1,0 +1,14 @@
+services:
+  bot:
+    build: .
+    container_name: secret_santa_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - santa_db:/app/secret_santa.db
+      - santa_logs:/app/secret_santa.log
+
+volumes:
+  santa_db:
+  santa_logs:
